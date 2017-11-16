@@ -1,1 +1,843 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"img-f",
+				"img-floating"
+			],
+			[
+				"$te",
+				"$text-secondary\t(constants.scss)"
+			],
+			[
+				"img",
+				"img-fluid"
+			],
+			[
+				"$tex",
+				"$text-primary\t(constants.scss)"
+			],
+			[
+				"nuxt",
+				"nuxt-link"
+			],
+			[
+				"ng-c",
+				"ng-cloak\tAngularJS"
+			],
+			[
+				"elem",
+				"element\t(projects.json)"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"Anh",
+				"AnchoredCustomization"
+			],
+			[
+				"sta",
+				"staggered"
+			],
+			[
+				"prel",
+				"preloadImages"
+			],
+			[
+				"small",
+				"smallScreen"
+			],
+			[
+				"fir",
+				"firsts"
+			],
+			[
+				"proj",
+				"project"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"transi",
+				"transition\t(drawing.js)"
+			],
+			[
+				"tran",
+				"transform\t(style.css)"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"details",
+				"detailsVisible"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".eslintrc",
+			"settings":
+			{
+				"buffer_size": 28,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/App.js",
+			"settings":
+			{
+				"buffer_size": 524,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 108763,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 1262,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 1000.0,
+		"last_filter": "li",
+		"selected_items":
+		[
+			[
+				"li",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"close ",
+				"Project: Close"
+			],
+			[
+				"packli",
+				"Package Control: List Packages"
+			],
+			[
+				"jshint",
+				"JSHint"
+			]
+		],
+		"width": 1200.0
+	},
+	"console":
+	{
+		"height": 399.0,
+		"history":
+		[
+			"~",
+			"ls ~",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Antoine/programmation/web/farmville",
+		"/C/Users/Antoine/programmation/web/farmville/src"
+	],
+	"file_history":
+	[
+		"/C/Users/Antoine/programmation/web/farmville/eslintrc.txt",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Antoine/programmation/web/farmville/farmville.sublime-project",
+		"/C/Users/Antoine/programmation/web/ecoation/Ecoation Front-end Challenge/sites-simplified.json",
+		"/C/Users/Antoine/programmation/web/ecoation/Ecoation Front-end Challenge/farms.json",
+		"/C/Users/Antoine/programmation/web/ecoation/Ecoation Front-end Challenge/sites.json",
+		"/C/Users/Antoine/programmation/web/portfolio/assets/scss/constants.scss",
+		"/C/Users/Antoine/programmation/web/portfolio/pages/about.vue",
+		"/C/Users/Antoine/programmation/web/portfolio/nuxt.config.js",
+		"/C/Users/Antoine/programmation/web/portfolio/components/LinkButton.vue",
+		"/C/Users/Antoine/programmation/web/portfolio/pages/index.vue",
+		"/C/Users/Antoine/programmation/web/portfolio/layouts/default.vue",
+		"/C/Users/Antoine/Dropbox/Personalization/Emmet/profiles.json",
+		"/C/Users/Antoine/programmation/web/portfolio/portfolio.sublime-project",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/Antoine/Dropbox/Personalization/Emmet/syntaxProfiles.json",
+		"/C/Users/Antoine/Downloads/bootstrap-4.0.0-beta.2/bootstrap-4.0.0-beta.2/dist/css/bootstrap-reboot.css",
+		"/C/Users/Antoine/programmation/web/portfolio/assets/variables.scss",
+		"/C/Users/Antoine/programmation/web/personal-website/.firebaserc",
+		"/C/Users/Antoine/programmation/web/personal-website/firebase.json",
+		"/C/Users/Antoine/programmation/web/portfolio/bower.json",
+		"/C/Users/Antoine/Desktop/dilan-email.txt",
+		"/C/Users/Antoine/Documents/Utilities/Banque/Scotiabank/info.txt",
+		"/C/Users/Antoine/Desktop/dilan-presentation.txt",
+		"/C/Users/Antoine/Desktop/feedback.txt",
+		"/C/Users/Antoine/Documents/Utilities/Immigration/notes.txt",
+		"/C/Users/Antoine/Desktop/murderism.txt",
+		"/C/Users/Antoine/programmation/web/personal-website/css/style.css",
+		"/C/Users/Antoine/programmation/web/personal-website/html/projects.html",
+		"/C/Users/Antoine/programmation/web/personal-website/js/controllers.js",
+		"/C/Users/Antoine/programmation/web/personal-website/data/projects.json",
+		"/C/Users/Antoine/programmation/web/personal-website/html/about.html",
+		"/C/Users/Antoine/programmation/web/personal-website/index.html",
+		"/C/Users/Antoine/programmation/web/personal-website/js/drawing.js",
+		"/C/Users/Antoine/programmation/web/personal-website/.public/index.html",
+		"/C/Users/Antoine/programmation/web/personal-website/.public/404.html",
+		"/C/Users/Antoine/programmation/web/personal-website/.gitignore",
+		"/C/Users/Antoine/programmation/web/personal-website/firebase-debug.log",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Antoine/programmation/web/personal-website/js/app.js",
+		"/C/Users/Antoine/AppData/Local/Temp/scp29808/www/antoineponsard/dist/portfolio.min.js",
+		"/C/Users/Antoine/AppData/Local/Temp/scp29469/www/antoineponsard/index.html",
+		"/C/Users/Antoine/programmation/web/personal-website/dist/portfolio.min.js",
+		"/C/Users/Antoine/programmation/web/personal-website/dist/portfolio.js",
+		"/C/Users/Antoine/programmation/web/personal-website/js/helpers.js",
+		"/C/Users/Antoine/programmation/web/personal-website/js/projects.json",
+		"/C/Users/Antoine/programmation/web/personal-website/gruntfile.js",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/views/main.html",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/views/about.html",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/styles/main.scss",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/scripts/controllers/about.js",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/scripts/controllers/main.js",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/scripts/app.js",
+		"/C/Users/Antoine/programmation/web/personal-website/personal-website.sublime-project",
+		"/C/Users/Antoine/programmation/web/personal-website/package.json",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/package.json",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/Gruntfile.js",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/dist/index.html",
+		"/C/Users/Antoine/programmation/.jshintrc",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/scripts/1.js",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/scripts/app.js",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/Gruntfile-old.js",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/dist/.min.js",
+		"/C/Users/Antoine/programmation/web/misc/basic-grunt/dist/.js",
+		"/C/Users/Antoine/programmation/web/misc/angular-default/app/index.html",
+		"/C/Users/Antoine/programmation/web/personal-website/html/header.html",
+		"/C/Users/Antoine/programmation/web/personal-website/html/footer.html",
+		"/C/Users/Antoine/programmation/web/misc/google/style.css",
+		"/C/Users/Antoine/programmation/web/misc/google/index.html",
+		"/C/Users/Antoine/Dropbox/sharelatex/thesis/thesis/thesis.tex",
+		"/C/Users/Antoine/Desktop/url.htm",
+		"/C/Users/Antoine/Desktop/preload.html",
+		"/C/Users/Antoine/Desktop/sharelatex.html",
+		"/C/Users/Antoine/AppData/Local/Temp/tandf_uqrp203_77.bib",
+		"/C/Users/Antoine/AppData/Local/Temp/review-601-1.txt",
+		"/C/Users/Antoine/programmation/web/personal-website/html/logo.html",
+		"/C/Users/Antoine/programmation/web/personal-website/css/style.log",
+		"/C/Users/Antoine/programmation/web/personal-website/sitemap.xml",
+		"/C/Users/Antoine/Desktop/stencil.sh",
+		"/C/Users/Antoine/Desktop/portfolio.sh",
+		"/C/Users/Antoine/Desktop/stencil.bat",
+		"/C/Users/Antoine/Desktop/stencil.txt",
+		"/C/Users/Antoine/Downloads/pcbanking.ascii",
+		"/C/Users/Antoine/Desktop/Adobe Illustrator CC 2014 64 bit (crack) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/C/cygwin64/cyg.bat",
+		"/C/Users/Antoine/Dropbox/Personalization/programmation/.minttyrc",
+		"/C/Users/Antoine/.bash_profile",
+		"/C/cygwin64/etc/nsswitch.conf",
+		"/C/Users/Antoine/.minttyrc"
+	],
+	"find":
+	{
+		"height": 86.0
+	},
+	"find_in_files":
+	{
+		"height": 127.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"phaseId",
+			"farmID",
+			"2f39a775-979a-4b9c-ad1b-c4160e88e803",
+			"b8543f90-2eca-11e7-8c4a-19133736e14d",
+			"\"bays\"",
+			"farmId",
+			"5cf598a0-8d0d-11e7-89be-81f16739711d",
+			"img-floating",
+			"img-fluid",
+			"blue-section",
+			"row",
+			"offset",
+			"<p>",
+			"\"",
+			"/static",
+			"/css",
+			"div",
+			"href",
+			"header",
+			"section",
+			"Source Sans Pro",
+			"button",
+			"red",
+			"a",
+			"Do",
+			"until",
+			"company",
+			"\n",
+			".\n",
+			"project-pictures",
+			"onsole",
+			"staggered",
+			"console.log",
+			"staggered",
+			"<h3",
+			"em",
+			"<em> (",
+			"\"Web\"",
+			"Other",
+			"other",
+			"http://",
+			"http:",
+			"http://",
+			"http:",
+			"ui-bootstrap",
+			"model",
+			"json",
+			"rojects.json",
+			"projects.json",
+			"$",
+			"scripts",
+			"src/**/*.js",
+			"unit",
+			"name",
+			"/scrip",
+			"header",
+			"logoText",
+			"drawing.drawLogo",
+			"body",
+			"footer",
+			"ng-cloak",
+			"footer",
+			"#content",
+			"footer",
+			"#footer",
+			"#header",
+			"parent",
+			"children",
+			"projects",
+			"\n",
+			"bootstrap.min.js",
+			"inline-list",
+			"$timeout",
+			"\"All\"",
+			"model",
+			"$scope.changeTag",
+			"scatter",
+			"sc",
+			"scatter",
+			"$scope",
+			"screen",
+			"scatter",
+			"$http",
+			"projects",
+			"loadImageLocation",
+			"load(",
+			"$q",
+			"promise",
+			"deferred",
+			"max-width",
+			"links",
+			"animations",
+			"-",
+			"\n",
+			"projectsCtrl",
+			"onload",
+			"1",
+			"0",
+			"scaleY",
+			"ease",
+			"linear",
+			"enter",
+			"scale",
+			"ansform:",
+			"opacity",
+			"project-title",
+			"project-header",
+			"scale",
+			"scale(1)",
+			"transform",
+			"project-icon",
+			".project-icon",
+			".project.ng-enter .project-icon",
+			"collapseProjects",
+			"enter",
+			".project.ng-enter",
+			".project-title",
+			".project",
+			".my-animation",
+			"drawAppropriateLogo",
+			".ng-enter",
+			"animate",
+			"\n",
+			"1.3.13",
+			"icon",
+			"fade",
+			"\n",
+			"logoText"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"main",
+			"footer",
+			"header",
+			"project-banner",
+			"textLink",
+			"justified-text"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".eslintrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/App.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 108763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1262,
+								1262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 993.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 58.0
+	},
+	"input":
+	{
+		"height": 190.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "farmville.sublime-project",
+	"replace":
+	{
+		"height": 168.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"js",
+				"js\\drawing.js"
+			],
+			[
+				"css",
+				"css\\style.css"
+			],
+			[
+				"cs",
+				"css\\style.css"
+			],
+			[
+				"ap",
+				"js\\app.js"
+			],
+			[
+				"con",
+				"js\\controllers.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"pro",
+				"js\\projects.json"
+			],
+			[
+				"sty",
+				"css\\style.css"
+			],
+			[
+				"h",
+				"js\\helpers.js"
+			],
+			[
+				"dra",
+				"js\\drawing.js"
+			],
+			[
+				"hel",
+				"js\\helpers.js"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"foo",
+				"html\\footer.html"
+			],
+			[
+				"he",
+				"html\\header.html"
+			],
+			[
+				"p",
+				"js\\projects.json"
+			],
+			[
+				"po",
+				"html\\projects.html"
+			],
+			[
+				"ab",
+				"html\\about.html"
+			],
+			[
+				"lo",
+				"html\\logo.html"
+			],
+			[
+				"d",
+				"js\\drawing.js"
+			],
+			[
+				"dr",
+				"js\\drawing.js"
+			],
+			[
+				"app",
+				"js\\app.js"
+			],
+			[
+				"log",
+				"html\\logo.html"
+			],
+			[
+				"jso",
+				"js\\projects.json"
+			],
+			[
+				"abo",
+				"html\\about.html"
+			],
+			[
+				"s",
+				"css\\style.css"
+			],
+			[
+				"json",
+				"js\\projects.json"
+			],
+			[
+				"cont",
+				"js\\controllers.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 1250.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Antoine\\programmation\\web\\gallery\\gallery.sublime-project"
+			]
+		],
+		"width": 950.0
+	},
+	"select_symbol":
+	{
+		"height": 446.0,
+		"last_filter": "pcitu",
+		"selected_items":
+		[
+			[
+				"pcitu",
+				"pictureFrame"
+			],
+			[
+				"g",
+				"greenButton"
+			],
+			[
+				"",
+				"container.small-container"
+			],
+			[
+				"b",
+				"greenButton"
+			],
+			[
+				"prode",
+				"projec-details"
+			],
+			[
+				"po",
+				"portfolio-link"
+			],
+			[
+				"padd",
+				"paddingBottom"
+			],
+			[
+				"tex",
+				"textLink"
+			],
+			[
+				"in",
+				"inline-list"
+			],
+			[
+				"inline",
+				"inline-list"
+			],
+			[
+				"drawing",
+				"drawing.drawLogo = function(width, height, strokeWidth, state, animate, cubic)"
+			],
+			[
+				"gr",
+				"greenButton"
+			],
+			[
+				"gree",
+				"greenButton"
+			],
+			[
+				"projecde",
+				"project-description"
+			],
+			[
+				"logote",
+				"logoText"
+			],
+			[
+				"small-con",
+				"container.small-container"
+			]
+		],
+		"width": 1460.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
