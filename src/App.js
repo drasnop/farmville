@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Clock from "./Clock.js";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -14,6 +15,7 @@ class App extends Component {
           To get started, edit <code> src / App.js </code> and save to reload.
         </p>
         <h1> Hello, {formatName(user)}! </h1>
+        <Clock />
       </div>
     );
   }
