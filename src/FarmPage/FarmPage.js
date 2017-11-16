@@ -4,7 +4,12 @@ import TextField from "material-ui/TextField";
 class FarmPage extends Component {
   constructor(props) {
     super(props);
+    this.handleNameChange = this.handleNameChange.bind(this);
     this.handleAddressChange = this.handleAddressChange.bind(this);
+  }
+
+  handleNameChange(e) {
+    this.props.onNameChange(e.target.value);
   }
 
   handleAddressChange(e) {
@@ -15,6 +20,12 @@ class FarmPage extends Component {
     return (
       <div>
         <h1>{this.props.farm.name}</h1>
+        <TextField
+          value={this.props.farm.name}
+          onChange={this.handleNameChange}
+          floatingLabelText="Name"
+        />
+        <br />
         <TextField
           value={this.props.farm.address}
           onChange={this.handleAddressChange}

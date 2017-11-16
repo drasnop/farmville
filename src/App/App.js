@@ -13,7 +13,15 @@ class App extends Component {
       farms: farms,
       sites: sites
     };
+    this.onNameChange = this.onNameChange.bind(this);
     this.onAddressChange = this.onAddressChange.bind(this);
+  }
+
+  onNameChange(name) {
+    const farm0Id = Object.keys(this.state.farms)[0];
+    let farms = { ...this.state.farms };
+    farms[farm0Id].name = name;
+    this.setState({ farms });
   }
 
   onAddressChange(address) {
@@ -28,7 +36,11 @@ class App extends Component {
     return (
       <div className="App">
         <MuiThemeProvider>
-          <FarmPage farm={farm0} onAddressChange={this.onAddressChange} />
+          <FarmPage
+            farm={farm0}
+            onNameChange={this.onNameChange}
+            onAddressChange={this.onAddressChange}
+          />
         </MuiThemeProvider>
       </div>
     );
