@@ -1,0 +1,18 @@
+{
+   "folders":
+   [
+      {
+         "path": "/C/Users/Antoine/programmation/web/farmville",
+         "name":"farmville",
+         "folder_exclude_patterns":[
+            ".git",
+            "node_modules",
+            "dist"
+         ],
+         "file_exclude_patterns": [
+            ".git*",
+            "*.sublime*"
+            ]
+      }
+   ]
+}
