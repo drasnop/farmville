@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TextField from "material-ui/TextField";
 
 class FarmPage extends Component {
   constructor(props) {
@@ -14,9 +15,10 @@ class FarmPage extends Component {
     return (
       <div>
         <h1>{this.props.farm.name}</h1>
-        <input
+        <TextField
           value={this.props.farm.address}
           onChange={this.handleAddressChange}
+          floatingLabelText="Address"
         />
       </div>
     );

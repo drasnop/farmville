@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import farms from "../data/farms.json";
 import sites from "../data/sites.json";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import FarmPage from "../FarmPage/FarmPage";
 
 class App extends Component {
@@ -26,8 +27,9 @@ class App extends Component {
     const farm0 = this.state.farms[Object.keys(this.state.farms)[0]];
     return (
       <div className="App">
-        {farm0.name}
-        <FarmPage farm={farm0} onAddressChange={this.onAddressChange} />
+        <MuiThemeProvider>
+          <FarmPage farm={farm0} onAddressChange={this.onAddressChange} />
+        </MuiThemeProvider>
       </div>
     );
   }
