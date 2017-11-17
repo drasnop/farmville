@@ -32,6 +32,7 @@ class App extends Component {
     this.onSiteNameChange = this.onSiteNameChange.bind(this);
     this.onSiteCropChange = this.onSiteCropChange.bind(this);
     this.onSiteCreatedAtChange = this.onSiteCreatedAtChange.bind(this);
+    this.deleteFactor = this.deleteFactor.bind(this);
   }
 
   componentDidMount() {
@@ -82,6 +83,16 @@ class App extends Component {
     this.setState({ sites });
   }
 
+  deleteFactor(id, factorName) {
+    let sites = { ...this.state.sites };
+    sites[id].potentialFactors = sites[id].potentialFactors.filter(
+      factor => factor !== factorName
+    );
+    this.setState({ sites });
+  }
+
+  /* render */
+
   render() {
     const ActiveFarmPage = props => {
       return (
@@ -103,6 +114,7 @@ class App extends Component {
           onCropChange={this.onSiteCropChange}
           onCreatedAtChange={this.onSiteCreatedAtChange}
           onDrawerToggle={this.onDrawerToggle}
+          deleteFactor={this.deleteFactor}
           {...props}
         />
       );
