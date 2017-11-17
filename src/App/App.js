@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 import history from "../services/history";
 import "./App.css";
 
@@ -107,6 +107,8 @@ class App extends Component {
       );
     };
 
+    const defaultFarmId = Object.keys(this.state.farms)[0];
+
     return (
       <MuiThemeProvider>
         <Router history={history}>
@@ -120,9 +122,12 @@ class App extends Component {
               <Switch>
                 <Route path="/farm/:id" render={ActiveFarmPage} />
                 <Route path="/site/:id" render={ActiveSitePage} />
+                <Redirect exact from="/" to={`/farm/${defaultFarmId}`} />
                 <Route
                   render={() => (
-                    <h1>The page you're looking for hasn't grown yet</h1>
+                    <p className="pageBody">
+                      The page you're looking for hasn't grown yet!
+                    </p>
                   )}
                 />
               </Switch>
