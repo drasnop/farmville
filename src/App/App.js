@@ -19,7 +19,6 @@ class App extends Component {
       sites: sites,
       sideDrawerOpen: true
     };
-    // Convert dates into proper format
     // Farms update methods
     this.onFarmNameChange = this.onFarmNameChange.bind(this);
     this.onFarmAddressChange = this.onFarmAddressChange.bind(this);
@@ -30,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // Convert dates into proper format
     const site0Id = Object.keys(this.state.sites)[0];
     let sites = { ...this.state.sites };
     sites[site0Id].createdAt = new Date(sites[site0Id].createdAt * 1000);

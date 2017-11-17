@@ -5,43 +5,36 @@ class FarmPage extends Component {
   constructor(props) {
     super(props);
 
-    // In a real app we would probably call the API to get only that farm
-    this.state = {
-      id: this.props.match.params.id,
-      farm: this.props.farms[this.props.match.params.id]
-    };
+    // In a real app we would probably call the API
+    // to get only the data for that farm
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleAddressChange = this.handleAddressChange.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      id: nextProps.match.params.id,
-      farm: nextProps.farms[nextProps.match.params.id]
-    });
-  }
-
   handleNameChange(e) {
-    this.props.onNameChange(this.state.id, e.target.value);
+    this.props.onNameChange(this.props.match.params.id, e.target.value);
   }
 
   handleAddressChange(e) {
-    this.props.onAddressChange(this.state.id, e.target.value);
+    this.props.onAddressChange(this.props.match.params.id, e.target.value);
   }
 
   render() {
+    const id = this.props.match.params.id;
+    const farm = this.props.farms[id];
+
     return (
       <div>
-        <h1>{this.state.farm.name}</h1>
+        <h1>{farm.name}</h1>
         <TextField
-          value={this.state.farm.name}
+          value={farm.name}
           onChange={this.handleNameChange}
           floatingLabelText="Name"
         />
         <br />
         <TextField
-          value={this.state.farm.address}
+          value={farm.address}
           onChange={this.handleAddressChange}
           floatingLabelText="Address"
         />
