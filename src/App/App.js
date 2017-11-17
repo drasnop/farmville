@@ -32,6 +32,7 @@ class App extends Component {
     this.onSiteNameChange = this.onSiteNameChange.bind(this);
     this.onSiteCropChange = this.onSiteCropChange.bind(this);
     this.onSiteCreatedAtChange = this.onSiteCreatedAtChange.bind(this);
+    this.addFactor = this.addFactor.bind(this);
     this.deleteFactor = this.deleteFactor.bind(this);
   }
 
@@ -91,6 +92,12 @@ class App extends Component {
     this.setState({ sites });
   }
 
+  addFactor(id, factorName) {
+    let sites = { ...this.state.sites };
+    sites[id].potentialFactors = sites[id].potentialFactors.concat(factorName);
+    this.setState({ sites });
+  }
+
   /* render */
 
   render() {
@@ -114,6 +121,7 @@ class App extends Component {
           onCropChange={this.onSiteCropChange}
           onCreatedAtChange={this.onSiteCreatedAtChange}
           onDrawerToggle={this.onDrawerToggle}
+          addFactor={this.addFactor}
           deleteFactor={this.deleteFactor}
           {...props}
         />

@@ -64,6 +64,7 @@ class SitePage extends Component {
           <br />
           <PotentialFactors
             site={site}
+            addFactor={this.props.addFactor}
             deleteFactor={this.props.deleteFactor}
           />
         </div>
