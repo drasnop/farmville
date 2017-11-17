@@ -3,6 +3,7 @@ import "./App.css";
 import farms from "../data/farms.json";
 import sites from "../data/sites.json";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import FarmPage from "../FarmPage/FarmPage";
 import SitePage from "../SitePage/SitePage";
@@ -71,29 +72,46 @@ class App extends Component {
   render() {
     const farm0 = this.state.farms[Object.keys(this.state.farms)[0]];
     const site0 = this.state.sites[Object.keys(this.state.sites)[0]];
+
+    const ActiveFarmPage = props => {
+      return (
+        <FarmPage
+          farm={farm0}
+          onNameChange={this.onFarmNameChange.bind(this)}
+          onAddressChange={this.onFarmAddressChange.bind(this)}
+          {...props}
+        />
+      );
+    };
+
+    const ActiveSitePage = props => {
+      return (
+        <SitePage
+          site={site0}
+          onNameChange={this.onSiteNameChange}
+          onCropChange={this.onSiteCropChange}
+          onCreatedAtChange={this.onSiteCreatedAtChange}
+          {...props}
+        />
+      );
+    };
+
     return (
-      <MuiThemeProvider>
-        <div className="App">
-          <SideDrawer
-            open={this.state.sideDrawerOpen}
-            farms={this.state.farms}
-            sites={this.state.sites}
-          />
-          <div className="main">
-            <FarmPage
-              farm={farm0}
-              onNameChange={this.onFarmNameChange}
-              onAddressChange={this.onFarmAddressChange}
+      <Router>
+        <MuiThemeProvider>
+          <div className="App">
+            <SideDrawer
+              open={this.state.sideDrawerOpen}
+              farms={this.state.farms}
+              sites={this.state.sites}
             />
-            <SitePage
-              site={site0}
-              onNameChange={this.onSiteNameChange}
-              onCropChange={this.onSiteCropChange}
-              onCreatedAtChange={this.onSiteCreatedAtChange}
-            />
+            <div className="main">
+              <Route path="/farm" render={ActiveFarmPage} />
+              <Route path="/site" render={ActiveSitePage} />
+            </div>
           </div>
-        </div>
-      </MuiThemeProvider>
+        </MuiThemeProvider>
+      </Router>
     );
   }
 }
