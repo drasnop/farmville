@@ -75,17 +75,19 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <SideDrawer open={this.state.sideDrawerOpen} />
-          <FarmPage
-            farm={farm0}
-            onNameChange={this.onFarmNameChange}
-            onAddressChange={this.onFarmAddressChange}
-          />
-          <SitePage
-            site={site0}
-            onNameChange={this.onSiteNameChange}
-            onCropChange={this.onSiteCropChange}
-            onCreatedAtChange={this.onSiteCreatedAtChange}
-          />
+          <div className="main">
+            <FarmPage
+              farm={farm0}
+              onNameChange={this.onFarmNameChange}
+              onAddressChange={this.onFarmAddressChange}
+            />
+            <SitePage
+              site={site0}
+              onNameChange={this.onSiteNameChange}
+              onCropChange={this.onSiteCropChange}
+              onCreatedAtChange={this.onSiteCreatedAtChange}
+            />
+          </div>
         </div>
       </MuiThemeProvider>
     );
