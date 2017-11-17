@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TextField from "material-ui/TextField";
 import AppBar from "material-ui/AppBar";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class FarmPage extends Component {
   constructor(props) {
@@ -29,6 +30,9 @@ class FarmPage extends Component {
   render() {
     const id = this.props.match.params.id;
     const farm = this.props.farms[id];
+
+    if (typeof farm === "undefined")
+      return <ErrorMessage text="Uh oh, we can't find this farm..." />;
 
     return (
       <div>

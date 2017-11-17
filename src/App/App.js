@@ -7,6 +7,7 @@ import "./App.css";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import FarmPage from "../FarmPage/FarmPage";
 import SitePage from "../SitePage/SitePage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 // In a real app we would load these from API
 import farms from "../data/farms.json";
@@ -107,6 +108,12 @@ class App extends Component {
       );
     };
 
+    const ActiveErrorMessage = props => {
+      return (
+        <ErrorMessage text="The page you are looking for hasn't grown yet!" />
+      );
+    };
+
     const defaultFarmId = Object.keys(this.state.farms)[0];
 
     return (
@@ -123,13 +130,7 @@ class App extends Component {
                 <Route path="/farm/:id" render={ActiveFarmPage} />
                 <Route path="/site/:id" render={ActiveSitePage} />
                 <Redirect exact from="/" to={`/farm/${defaultFarmId}`} />
-                <Route
-                  render={() => (
-                    <p className="pageBody">
-                      The page you're looking for hasn't grown yet!
-                    </p>
-                  )}
-                />
+                <Route component={ActiveErrorMessage} />
               </Switch>
             </div>
           </div>

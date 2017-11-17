@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TextField from "material-ui/TextField";
 import DatePicker from "material-ui/DatePicker";
 import AppBar from "material-ui/AppBar";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class SitePage extends Component {
   constructor(props) {
@@ -31,6 +32,9 @@ class SitePage extends Component {
   render() {
     const id = this.props.match.params.id;
     const site = this.props.sites[id];
+
+    if (typeof site === "undefined")
+      return <ErrorMessage text="Uh oh, we can't find this site..." />;
 
     return (
       <div>
