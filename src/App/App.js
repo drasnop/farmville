@@ -3,6 +3,7 @@ import "./App.css";
 import farms from "../data/farms.json";
 import sites from "../data/sites.json";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import SideDrawer from "../SideDrawer/SideDrawer";
 import FarmPage from "../FarmPage/FarmPage";
 import SitePage from "../SitePage/SitePage";
 
@@ -12,7 +13,8 @@ class App extends Component {
     // In a real app we would load these from API
     this.state = {
       farms: farms,
-      sites: sites
+      sites: sites,
+      sideDrawerOpen: true
     };
     // Convert dates into proper format
     // Farms update methods
@@ -72,6 +74,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
+          <SideDrawer open={this.state.sideDrawerOpen} />
           <FarmPage
             farm={farm0}
             onNameChange={this.onFarmNameChange}
