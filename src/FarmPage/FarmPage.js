@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TextField from "material-ui/TextField";
+import AppBar from "material-ui/AppBar";
 
 class FarmPage extends Component {
   constructor(props) {
@@ -26,18 +27,20 @@ class FarmPage extends Component {
 
     return (
       <div>
-        <h1>{farm.name}</h1>
-        <TextField
-          value={farm.name}
-          onChange={this.handleNameChange}
-          floatingLabelText="Name"
-        />
-        <br />
-        <TextField
-          value={farm.address}
-          onChange={this.handleAddressChange}
-          floatingLabelText="Address"
-        />
+        <AppBar title={farm.name} />
+        <div className="pageBody">
+          <TextField
+            value={farm.name}
+            onChange={this.handleNameChange}
+            floatingLabelText="Name"
+          />
+          <br />
+          <TextField
+            value={farm.address}
+            onChange={this.handleAddressChange}
+            floatingLabelText="Address"
+          />
+        </div>
       </div>
     );
   }

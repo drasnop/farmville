@@ -4,10 +4,21 @@ body {
 
 .main {
   margin-left: 256px;
-  padding: 0 24px;
+}
+
+.pageBody {
+  padding: 0px 24px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+
+/* @font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./fonts/Roboto-Regular.ttf) format("ttf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto"), url(./fonts/Roboto-Regular.ttf) format("ttf");
-}
+  font-weight: 500;
+  src: local("Roboto"), url(./fonts/Roboto-Medium.ttf) format("ttf");
+} */

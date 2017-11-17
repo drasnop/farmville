@@ -1,6 +1,7 @@
 import React from "react";
 import Drawer from "material-ui/Drawer";
 import { List, ListItem } from "material-ui/List";
+import Subheader from "material-ui/Subheader";
 import history from "../services/history.js";
 
 // I'm not using a class here since I don't need to hold a state on the side drawer
@@ -46,6 +47,9 @@ export default function SideDrawer(props) {
 
   return (
     <Drawer open={props.open}>
+      <Subheader style={{ marginTop: "16px", marginBottom: "-8px" }}>
+        My farms
+      </Subheader>
       <List>{farmsList}</List>
     </Drawer>
   );

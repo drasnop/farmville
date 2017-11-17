@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TextField from "material-ui/TextField";
 import DatePicker from "material-ui/DatePicker";
+import AppBar from "material-ui/AppBar";
 
 class SitePage extends Component {
   constructor(props) {
@@ -28,23 +29,25 @@ class SitePage extends Component {
 
     return (
       <div>
-        <h1>{site.name}</h1>
-        <TextField
-          value={site.name}
-          onChange={this.handleNameChange}
-          floatingLabelText="Name"
-        />
-        <br />
-        <TextField
-          value={site.crop}
-          onChange={this.handleCropChange}
-          floatingLabelText="Crop"
-        />
-        <DatePicker
-          value={site.createdAt}
-          onChange={this.handleCreatedAtChange}
-          hintText="Created on"
-        />
+        <AppBar title={site.name} />
+        <div className="pageBody">
+          <TextField
+            value={site.name}
+            onChange={this.handleNameChange}
+            floatingLabelText="Name"
+          />
+          <br />
+          <TextField
+            value={site.crop}
+            onChange={this.handleCropChange}
+            floatingLabelText="Crop"
+          />
+          <DatePicker
+            value={site.createdAt}
+            onChange={this.handleCreatedAtChange}
+            hintText="Created on"
+          />
+        </div>
       </div>
     );
   }
