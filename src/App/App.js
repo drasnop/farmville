@@ -74,7 +74,11 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <SideDrawer open={this.state.sideDrawerOpen} />
+          <SideDrawer
+            open={this.state.sideDrawerOpen}
+            farms={this.state.farms}
+            sites={this.state.sites}
+          />
           <div className="main">
             <FarmPage
               farm={farm0}
