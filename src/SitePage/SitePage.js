@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import TextField from "material-ui/TextField";
 import DatePicker from "material-ui/DatePicker";
 import AppBar from "material-ui/AppBar";
+import { List, ListItem } from "material-ui/List";
+import Subheader from "material-ui/Subheader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class SitePage extends Component {
@@ -36,6 +38,10 @@ class SitePage extends Component {
     if (typeof site === "undefined")
       return <ErrorMessage text="Uh oh, we can't find this site..." />;
 
+    const potentialFactors = site.potentialFactors.map(factor => {
+      return <ListItem>{factor}</ListItem>;
+    });
+
     return (
       <div>
         <AppBar
@@ -54,11 +60,15 @@ class SitePage extends Component {
             onChange={this.handleCropChange}
             floatingLabelText="Crop"
           />
+          <br />
           <DatePicker
             value={site.createdAt}
             onChange={this.handleCreatedAtChange}
             hintText="Created on"
           />
+          <br />
+          <Subheader>Potential Factors</Subheader>
+          <List>{potentialFactors}</List>
         </div>
       </div>
     );
