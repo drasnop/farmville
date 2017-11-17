@@ -3,7 +3,7 @@ import "./App.css";
 import farms from "../data/farms.json";
 import sites from "../data/sites.json";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import history from "../services/history";
 
 import SideDrawer from "../SideDrawer/SideDrawer";
@@ -36,17 +36,15 @@ class App extends Component {
     this.setState({ sites });
   }
 
-  onFarmNameChange(name) {
-    const farm0Id = Object.keys(this.state.farms)[0];
+  onFarmNameChange(id, name) {
     let farms = { ...this.state.farms };
-    farms[farm0Id].name = name;
+    farms[id].name = name;
     this.setState({ farms });
   }
 
-  onFarmAddressChange(address) {
-    const farm0Id = Object.keys(this.state.farms)[0];
+  onFarmAddressChange(id, address) {
     let farms = { ...this.state.farms };
-    farms[farm0Id].address = address;
+    farms[id].address = address;
     this.setState({ farms });
   }
 
@@ -72,13 +70,12 @@ class App extends Component {
   }
 
   render() {
-    const farm0 = this.state.farms[Object.keys(this.state.farms)[0]];
     const site0 = this.state.sites[Object.keys(this.state.sites)[0]];
 
     const ActiveFarmPage = props => {
       return (
         <FarmPage
-          farm={farm0}
+          farms={this.state.farms}
           onNameChange={this.onFarmNameChange.bind(this)}
           onAddressChange={this.onFarmAddressChange.bind(this)}
           {...props}
@@ -109,8 +106,15 @@ class App extends Component {
               sites={this.state.sites}
             />
             <div className="main">
-              <Route path="/farm" render={ActiveFarmPage} />
-              <Route path="/site" render={ActiveSitePage} />
+              <Switch>
+                <Route path="/farm/:id" render={ActiveFarmPage} />
+                <Route path="/site/:id" render={ActiveSitePage} />
+                <Route
+                  render={() => (
+                    <h1>The page you're looking for hasn't grown yet</h1>
+                  )}
+                />
+              </Switch>
             </div>
           </div>
         </Router>

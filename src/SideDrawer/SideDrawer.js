@@ -8,12 +8,18 @@ export default function SideDrawer(props) {
   const farms = Object.keys(props.farms).map(farmId => props.farms[farmId]);
   const sites = Object.keys(props.sites).map(siteId => props.sites[siteId]);
 
-  function handleSiteClicked() {
-    history.push("/site");
+  function handleSiteClicked(id) {
+    return navigate("/site", id);
   }
 
-  function handleFarmClicked() {
-    history.push("/farm");
+  function handleFarmClicked(id) {
+    return navigate("/farm", id);
+  }
+
+  function navigate(path, id) {
+    return function() {
+      history.push(path + "/" + id);
+    };
   }
 
   // It would be easier if the farms were storing an array of their siteIds
@@ -24,7 +30,7 @@ export default function SideDrawer(props) {
         <ListItem
           primaryText={site.name}
           key={site.id}
-          onClick={handleSiteClicked}
+          onClick={handleSiteClicked(site.id)}
         />
       ));
   }
@@ -33,7 +39,7 @@ export default function SideDrawer(props) {
     <ListItem
       primaryText={farm.name}
       key={farm.id}
-      onClick={handleFarmClicked}
+      onClick={handleFarmClicked(farm.id)}
       nestedItems={farmSites(farm.id)}
     />
   ));
