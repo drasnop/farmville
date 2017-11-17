@@ -42,6 +42,7 @@ export default function SideDrawer(props) {
       key={farm.id}
       onClick={handleFarmClicked(farm.id)}
       nestedItems={farmSites(farm.id)}
+      primaryTogglesNestedList={true}
     />
   ));
 
