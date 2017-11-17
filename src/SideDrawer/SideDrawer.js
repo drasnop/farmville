@@ -1,15 +1,19 @@
 import React from "react";
 import Drawer from "material-ui/Drawer";
 import { List, ListItem } from "material-ui/List";
-import { Link } from "react-router-dom";
+import history from "../services/history.js";
 
+// I'm not using a class here since I don't need to hold a state on the side drawer
 export default function SideDrawer(props) {
   const farms = Object.keys(props.farms).map(farmId => props.farms[farmId]);
   const sites = Object.keys(props.sites).map(siteId => props.sites[siteId]);
-  var history = props.history;
 
   function handleSiteClicked() {
     history.push("/site");
+  }
+
+  function handleFarmClicked() {
+    history.push("/farm");
   }
 
   // It would be easier if the farms were storing an array of their siteIds
@@ -26,9 +30,12 @@ export default function SideDrawer(props) {
   }
 
   const farmsList = farms.map(farm => (
-    <Link to="/farm">
-      <ListItem primaryText={farm.name} nestedItems={farmSites(farm.id)} />
-    </Link>
+    <ListItem
+      primaryText={farm.name}
+      key={farm.id}
+      onClick={handleFarmClicked}
+      nestedItems={farmSites(farm.id)}
+    />
   ));
 
   return (

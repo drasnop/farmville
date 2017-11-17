@@ -3,7 +3,9 @@ import "./App.css";
 import farms from "../data/farms.json";
 import sites from "../data/sites.json";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "../services/history";
+
 import SideDrawer from "../SideDrawer/SideDrawer";
 import FarmPage from "../FarmPage/FarmPage";
 import SitePage from "../SitePage/SitePage";
@@ -97,8 +99,9 @@ class App extends Component {
     };
 
     return (
-      <Router>
-        <MuiThemeProvider>
+      // <Router>
+      <MuiThemeProvider>
+        <Router history={history}>
           <div className="App">
             <SideDrawer
               open={this.state.sideDrawerOpen}
@@ -110,8 +113,9 @@ class App extends Component {
               <Route path="/site" render={ActiveSitePage} />
             </div>
           </div>
-        </MuiThemeProvider>
-      </Router>
+        </Router>
+      </MuiThemeProvider>
+      // </Router>
     );
   }
 }
