@@ -11,34 +11,37 @@ class SitePage extends Component {
   }
 
   handleNameChange(e) {
-    this.props.onNameChange(e.target.value);
+    this.props.onNameChange(this.props.match.params.id, e.target.value);
   }
 
   handleCropChange(e) {
-    this.props.onCropChange(e.target.value);
+    this.props.onCropChange(this.props.match.params.id, e.target.value);
   }
 
   handleCreatedAtChange(e, date) {
-    this.props.onCreatedAtChange(date);
+    this.props.onCreatedAtChange(this.props.match.params.id, date);
   }
 
   render() {
+    const id = this.props.match.params.id;
+    const site = this.props.sites[id];
+
     return (
       <div>
-        <h1>{this.props.site.name}</h1>
+        <h1>{site.name}</h1>
         <TextField
-          value={this.props.site.name}
+          value={site.name}
           onChange={this.handleNameChange}
           floatingLabelText="Name"
         />
         <br />
         <TextField
-          value={this.props.site.crop}
+          value={site.crop}
           onChange={this.handleCropChange}
           floatingLabelText="Crop"
         />
         <DatePicker
-          value={this.props.site.createdAt}
+          value={site.createdAt}
           onChange={this.handleCreatedAtChange}
           hintText="Created on"
         />

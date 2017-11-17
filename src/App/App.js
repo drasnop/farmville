@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-import "./App.css";
-import farms from "../data/farms.json";
-import sites from "../data/sites.json";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "../services/history";
+import "./App.css";
 
 import SideDrawer from "../SideDrawer/SideDrawer";
 import FarmPage from "../FarmPage/FarmPage";
 import SitePage from "../SitePage/SitePage";
 
+// In a real app we would load these from API
+import farms from "../data/farms.json";
+import sites from "../data/sites.json";
+
 class App extends Component {
   constructor(props) {
     super(props);
-    // In a real app we would load these from API
     this.state = {
       farms: farms,
       sites: sites,
@@ -48,36 +49,31 @@ class App extends Component {
     this.setState({ farms });
   }
 
-  onSiteNameChange(name) {
-    const site0Id = Object.keys(this.state.sites)[0];
+  onSiteNameChange(id, name) {
     let sites = { ...this.state.sites };
-    sites[site0Id].name = name;
+    sites[id].name = name;
     this.setState({ sites });
   }
 
-  onSiteCropChange(crop) {
-    const site0Id = Object.keys(this.state.sites)[0];
+  onSiteCropChange(id, crop) {
     let sites = { ...this.state.sites };
-    sites[site0Id].crop = crop;
+    sites[id].crop = crop;
     this.setState({ sites });
   }
 
-  onSiteCreatedAtChange(date) {
-    const site0Id = Object.keys(this.state.sites)[0];
+  onSiteCreatedAtChange(id, date) {
     let sites = { ...this.state.sites };
-    sites[site0Id].createdAt = date;
+    sites[id].createdAt = date;
     this.setState({ sites });
   }
 
   render() {
-    const site0 = this.state.sites[Object.keys(this.state.sites)[0]];
-
     const ActiveFarmPage = props => {
       return (
         <FarmPage
           farms={this.state.farms}
-          onNameChange={this.onFarmNameChange.bind(this)}
-          onAddressChange={this.onFarmAddressChange.bind(this)}
+          onNameChange={this.onFarmNameChange}
+          onAddressChange={this.onFarmAddressChange}
           {...props}
         />
       );
@@ -86,7 +82,7 @@ class App extends Component {
     const ActiveSitePage = props => {
       return (
         <SitePage
-          site={site0}
+          sites={this.state.sites}
           onNameChange={this.onSiteNameChange}
           onCropChange={this.onSiteCropChange}
           onCreatedAtChange={this.onSiteCreatedAtChange}
@@ -96,7 +92,6 @@ class App extends Component {
     };
 
     return (
-      // <Router>
       <MuiThemeProvider>
         <Router history={history}>
           <div className="App">
@@ -119,7 +114,6 @@ class App extends Component {
           </div>
         </Router>
       </MuiThemeProvider>
-      // </Router>
     );
   }
 }
