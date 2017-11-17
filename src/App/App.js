@@ -20,9 +20,13 @@ class App extends Component {
       sites: sites,
       sideDrawerOpen: true
     };
+
+    this.onDrawerToggle = this.onDrawerToggle.bind(this);
+
     // Farms update methods
     this.onFarmNameChange = this.onFarmNameChange.bind(this);
     this.onFarmAddressChange = this.onFarmAddressChange.bind(this);
+
     // Sites update methods
     this.onSiteNameChange = this.onSiteNameChange.bind(this);
     this.onSiteCropChange = this.onSiteCropChange.bind(this);
@@ -37,6 +41,14 @@ class App extends Component {
     this.setState({ sites });
   }
 
+  onDrawerToggle() {
+    let sideDrawerOpen = { ...this.state.sideDrawerOpen };
+    sideDrawerOpen = !this.state.sideDrawerOpen;
+    this.setState({ sideDrawerOpen });
+  }
+
+  /* Farms update methods */
+
   onFarmNameChange(id, name) {
     let farms = { ...this.state.farms };
     farms[id].name = name;
@@ -48,6 +60,8 @@ class App extends Component {
     farms[id].address = address;
     this.setState({ farms });
   }
+
+  /* Site update methods */
 
   onSiteNameChange(id, name) {
     let sites = { ...this.state.sites };
@@ -74,6 +88,7 @@ class App extends Component {
           farms={this.state.farms}
           onNameChange={this.onFarmNameChange}
           onAddressChange={this.onFarmAddressChange}
+          onDrawerToggle={this.onDrawerToggle}
           {...props}
         />
       );
@@ -86,6 +101,7 @@ class App extends Component {
           onNameChange={this.onSiteNameChange}
           onCropChange={this.onSiteCropChange}
           onCreatedAtChange={this.onSiteCreatedAtChange}
+          onDrawerToggle={this.onDrawerToggle}
           {...props}
         />
       );
@@ -94,7 +110,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <Router history={history}>
-          <div className="App">
+          <div className={this.state.sideDrawerOpen ? "drawerOpen" : null}>
             <SideDrawer
               open={this.state.sideDrawerOpen}
               farms={this.state.farms}

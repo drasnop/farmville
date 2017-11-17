@@ -9,6 +9,7 @@ class SitePage extends Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleCropChange = this.handleCropChange.bind(this);
     this.handleCreatedAtChange = this.handleCreatedAtChange.bind(this);
+    this.handleHamburgerMenu = this.handleHamburgerMenu.bind(this);
   }
 
   handleNameChange(e) {
@@ -23,13 +24,20 @@ class SitePage extends Component {
     this.props.onCreatedAtChange(this.props.match.params.id, date);
   }
 
+  handleHamburgerMenu() {
+    this.props.onDrawerToggle();
+  }
+
   render() {
     const id = this.props.match.params.id;
     const site = this.props.sites[id];
 
     return (
       <div>
-        <AppBar title={site.name} />
+        <AppBar
+          title={site.name}
+          onLeftIconButtonTouchTap={this.handleHamburgerMenu}
+        />
         <div className="pageBody">
           <TextField
             value={site.name}

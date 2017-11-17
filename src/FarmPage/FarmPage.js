@@ -11,6 +11,7 @@ class FarmPage extends Component {
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleAddressChange = this.handleAddressChange.bind(this);
+    this.handleHamburgerMenu = this.handleHamburgerMenu.bind(this);
   }
 
   handleNameChange(e) {
@@ -21,13 +22,20 @@ class FarmPage extends Component {
     this.props.onAddressChange(this.props.match.params.id, e.target.value);
   }
 
+  handleHamburgerMenu() {
+    this.props.onDrawerToggle();
+  }
+
   render() {
     const id = this.props.match.params.id;
     const farm = this.props.farms[id];
 
     return (
       <div>
-        <AppBar title={farm.name} />
+        <AppBar
+          title={farm.name}
+          onLeftIconButtonTouchTap={this.handleHamburgerMenu}
+        />
         <div className="pageBody">
           <TextField
             value={farm.name}
